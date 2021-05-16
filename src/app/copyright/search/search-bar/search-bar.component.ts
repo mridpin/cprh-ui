@@ -22,9 +22,16 @@ export class SearchBarComponent implements OnInit {
   }
 
   onSearchAlbum(): void {
-    const albums = this.searchService.search();
-    this.newAlbumsEmitter.emit(albums);
-    console.log(albums);
+    this.searchService.search(this.searchParams)
+      .subscribe(
+        albums => {
+          console.log('undefined: ' + albums);
+          // this.newAlbumsEmitter.emit(albums);
+        },
+        error => {
+          console.log(error)
+        }
+      );
   }
 
   onClear(): void {
