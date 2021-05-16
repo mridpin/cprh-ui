@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="field">
+      <label class="label">Search Spotify database ...</label>
+      <div class="control">
+        <input id="name" class="input" type="text" placeholder="Search album ..." [(ngModel)]="searchParams" />
+      </div>
+    </div>
+    <div class="field is-grouped is-fullwidth">
+      <div class="control">
+        <button class="button is-link is-medium" (click)="onSearchAlbum()">Go!</button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light is-medium" (click)="onClear()">Clear</button>
+      </div>
+    </div>
+  <p>Params: {{ searchParams }}</p>
+</div>
