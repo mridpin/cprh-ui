@@ -25,8 +25,7 @@ export class SearchBarComponent implements OnInit {
     this.searchService.search(this.searchParams)
       .subscribe(
         albums => {
-          console.log('undefined: ' + albums);
-          // this.newAlbumsEmitter.emit(albums);
+          this.newAlbumsEmitter.emit(albums);
         },
         error => {
           console.log(error)

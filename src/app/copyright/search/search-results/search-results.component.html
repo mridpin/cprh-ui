@@ -1,9 +1,27 @@
-<div class="container">
-<h3 class="title is-5">Albums found:</h3>
-<ul class="content">
-    <li *ngFor="let album of albums">
-        <strong>{{album.name}}</strong>, by {{album.artist}}. {{album.year}}
-    </li>
-</ul>
-
+<div class="section container">
+  <h3 class="title is-5">Albums found:</h3>
+  <div class="content">
+    <table class="table is-hoverable">
+      <thead>
+        <tr>
+          <th>Album</th>
+          <th>Artist</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let album of albums">
+          <td>
+            {{ album.name }}
+          </td>
+          <td>
+            {{ album.artist }}
+          </td>
+          <td>
+            {{ album.year }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

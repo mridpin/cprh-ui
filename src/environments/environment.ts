@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: "https://cprh-app.herokuapp.com/",
+  url: "https://cprh-app.herokuapp.com",
 };
 
 /*
