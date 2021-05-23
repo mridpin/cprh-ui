@@ -7,6 +7,9 @@ export interface Album {
     name: string;
     artist: string;
     year: number;
+    copyright?: string;
+    image?: string;
+    label?: string;
 }
 
 // Injectable DTO object
@@ -19,7 +22,10 @@ export class AlbumAdapter implements Adapter<Album> {
             id: item.id,
             name: item.name,
             artist: item.artists[0].name,
-            year: new Date(item.release_date).getFullYear()
+            year: new Date(item.release_date).getFullYear(),
+            copyright: item.copyrights?.[0].text,
+            image: item.images?.url,
+            label: item.label,
         };
         return album;
     }

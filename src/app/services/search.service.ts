@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from "rxjs/operators";
+import { map, tap } from "rxjs/operators";
 
 import { environment } from 'src/environments/environment';
 import { Album, AlbumAdapter } from '../interfaces/album';
@@ -29,6 +29,22 @@ export class SearchService {
       }
     }).pipe(
       map((res: any) => res.albums.items.map((item: any) => this.albumAdapter.adapt(item)))
+    );
+  }
+
+  /**
+   * Returns if:
+   * 200 -> Album data mapped to Album interface
+   * other code -> Error code and message
+   * @param searchParams 
+   */
+  album(album: Album): Observable<Album> {
+    return this.http.get<Album>(environment.url + '/albums', {
+      params: {
+        albumId: album.id
+      }
+    }).pipe(
+      map((res: any) => this.albumAdapter.adapt(res))
     );
   }
 }

@@ -17,7 +17,6 @@ export class CopyrightComponent implements OnInit {
 
   changeAlbum(album: Album): void {
     this.album = album;
-    console.log(this.album);
   }
 
 }

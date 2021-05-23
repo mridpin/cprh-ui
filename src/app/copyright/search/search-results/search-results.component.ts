@@ -30,8 +30,6 @@ export class SearchResultsComponent implements OnInit {
           console.log(error)
         }
       );
-    console.log(album)
-    // this.newAlbumEmitter.emit(album);
   }
 
 }
