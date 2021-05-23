@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let album of albums">
+        <tr *ngFor="let album of albums" (click)="onClickAlbum(album)">
           <td>
             {{ album.name }}
           </td>

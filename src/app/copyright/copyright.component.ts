@@ -8,16 +8,16 @@ import { Album } from '../interfaces/album';
 })
 export class CopyrightComponent implements OnInit {
 
-  album: Album = {
-    id: '123',
-    name: 'sabaton',
-    artist: 'sabaton',
-    year: 2009
-  };
+  album!: Album;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeAlbum(album: Album): void {
+    this.album = album;
+    console.log(this.album);
   }
 
 }
