@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './copyright/search/search.component';
 import { SearchBarComponent } from './copyright/search/search-bar/search-bar.component';
 import { SearchResultsComponent } from './copyright/search/search-results/search-results.component';
+import { CopyrightViewComponent } from './copyright/copyright-view/copyright-view.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchResultsComponent } from './copyright/search/search-results/search
     CopyrightComponent,
     SearchComponent,
     SearchBarComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    CopyrightViewComponent
   ],
   imports: [
     BrowserModule,

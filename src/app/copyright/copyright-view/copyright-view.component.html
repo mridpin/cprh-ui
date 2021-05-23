@@ -1,0 +1,20 @@
+<section class="section">
+    <div class="container">
+        <table *ngIf="album" class="table">
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="{{album.image}}" alt="{{album.name}} cover" width="160">
+                    </td>
+                    <td>
+                        {{ album.label }}
+                    </td>                    
+                    <td>
+                        {{ album.copyright }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
