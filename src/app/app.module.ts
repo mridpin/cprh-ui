@@ -9,7 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './copyright/search/search.component';
 import { SearchBarComponent } from './copyright/search/search-bar/search-bar.component';
 import { SearchResultsComponent } from './copyright/search/search-results/search-results.component';
-import { CopyrightViewComponent } from './copyright/copyright-view/copyright-view.component';
+import { CopyrightViewComponent } from './copyright/search/search-results/copyright-view/copyright-view.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { CopyrightViewComponent } from './copyright/copyright-view/copyright-vie
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
